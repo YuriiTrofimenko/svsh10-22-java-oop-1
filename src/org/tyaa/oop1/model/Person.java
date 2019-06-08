@@ -13,8 +13,8 @@ package org.tyaa.oop1.model;
 public class Person {
     
     //Составляющая (поле / переменная) класса  типа строка
-    private String mFirstName;
-    private String mSurnameName;
+    public String mFirstName;
+    public String mSurnameName;
     private int mAge;
     
     //Составляющая (метод / функция) класса
@@ -32,27 +32,15 @@ public class Person {
             throw new Exception("Age must be greather than 0");
         }
     }
-    public void setFirstName(String _firstname) { 
-        mFirstName = _firstname;
-    }
-    public void setSurnameName(String _surnamename) { 
-        mSurnameName = _surnamename;
-    }
     
     //Составляющая (метод / функция) класса
     //Возвращает значение возраста из поля mAge
     public int getAge(){
         return mAge;
     }
-    public String getFirstName(){
-        return mFirstName;
-    }
-    public String getSurnameName(){
-        return mSurnameName;
-    }
 
     @Override
     public String toString() {
-        return mFirstName + " " + mSurnameName + " " + mAge + " years old";
+        return "Person{" + "mFirstName=" + mFirstName + ", mSurnameName=" + mSurnameName + ", mAge=" + mAge + '}';
     }
 }
