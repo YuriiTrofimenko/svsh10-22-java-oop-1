@@ -25,9 +25,9 @@ public class OOP1 {
         //Создали экземпляр (объект) "Person"
         //и сохранили ссылку на него в переменную типа "Person"
         Person p1 = new Person();
-        p1.mFirstName = "John";
+        //p1.mFirstName = "John";
         // p1.mFirstName = "Vasia";
-        p1.mSurnameName = "Connor";
+        //p1.mSurnameName = "Connor";
         System.out.println("Input person's age: ");
         Scanner sc = new Scanner(System.in);
         try {
@@ -42,6 +42,7 @@ public class OOP1 {
                 System.err.println(ex.getMessage());
             }
         }
+        
         // System.out.println(p1.mFirstName);
         // System.out.println(p1);
         //System.out.println(p1.mAge);
@@ -62,6 +63,36 @@ public class OOP1 {
             default:
                 System.out.println("Unknown age");
         }
+        System.out.println("Input person's name: ");
+        try {
+            //p1.mAge = -10;
+            p1.setFirstName(sc.next());
+        }
+        
+        
+        catch (InputMismatchException ex) {
+            System.err.println("Error: Input Mismatch with Expected Type");
+        }
+        catch (Exception ex) {
+            if (ex.getMessage() != null) {
+                System.err.println(ex.getMessage());
+            }
+        }
+        System.out.println("Input person's surname: ");
+        try {
+            //p1.mAge = -10;
+            p1.setSurnameName(sc.next());
+        }catch (InputMismatchException ex) {
+            System.err.println("Error: Input Mismatch with Expected Type");
+        }
+        catch (Exception ex) {
+            if (ex.getMessage() != null) {
+                System.err.println(ex.getMessage());
+            }    
+        }
+        System.out.println(p1);
     }
-    
 }
+       
+        //String firstname = 
+
