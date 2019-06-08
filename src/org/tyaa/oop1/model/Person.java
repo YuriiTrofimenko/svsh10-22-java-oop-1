@@ -12,10 +12,32 @@ package org.tyaa.oop1.model;
 //Класс, тип
 public class Person {
     
-    //Составляющая (поле) класса  типа строка
+    //Составляющая (поле / переменная) класса  типа строка
     public String mFirstName;
     public String mSurnameName;
-    public int mAge;
+    private int mAge;
+    
+    //Составляющая (метод / функция) класса
+    //Принимает один аргумент целого типа и записывает его в поле mAge,
+    //а если полученное значение не больше 0 - выбрасывает исключение
+    //Заголовок
+    public void setAge(int _age) throws Exception{
+       //Тело
+       //Проверка, что значение аргумента больше 0
+        if (_age > 0) {
+            //Сохранение значения в поле объекта
+            mAge = _age;
+        } else {
+            //Выброс исключения
+            throw new Exception("Age must be greather than 0");
+        }
+    }
+    
+    //Составляющая (метод / функция) класса
+    //Возвращает значение возраста из поля mAge
+    public int getAge(){
+        return mAge;
+    }
 
     @Override
     public String toString() {
